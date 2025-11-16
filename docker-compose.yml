@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  blue:
+    build: ./app
+    container_name: app-blue
+    restart: always
+    ports:
+      - "8082:3000" # Tu puerto Blue
+    environment:
+      - APP_VERSION=Blue 🔵
+    volumes:
+      # Conecta la "USB" a la carpeta /data de la app
+      - app-data:/usr/src/app/data
+
+  green:
+    build: ./app
+    container_name: app-green
+    restart: always
+    ports:
+      - "8083:3000" # Tu puerto Green
+    environment:
+      - APP_VERSION=Green 🟢
+    volumes:
+      # Conecta la MISMA "USB"
+      - app-data:/usr/src/app/data
+
+# Define la "USB" (Volumen)
+volumes:
+  app-data:
