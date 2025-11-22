@@ -19,7 +19,7 @@ jobs:
           port: 22
           script: |
             # 1. Ir a la carpeta del proyecto en el servidor
-            cd /root/Practica
+            cd /root/practica
 
             # 2. Descargar los últimos cambios de GitHub
             echo "Descargando cambios..."
