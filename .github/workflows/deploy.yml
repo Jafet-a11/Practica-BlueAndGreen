@@ -19,7 +19,7 @@ jobs:
           port: 22
           script: |
             # 1. Ir a la carpeta del proyecto en el servidor
-            cd /ruta/a/tu/repositorio/Practica-BlueAndGreen
+            cd /root/Practica
 
             # 2. Descargar los últimos cambios de GitHub
             echo "Descargando cambios..."
